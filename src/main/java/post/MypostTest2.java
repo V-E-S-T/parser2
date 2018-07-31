@@ -14,7 +14,7 @@ public class MypostTest2 {
 
     public static void main(String[] args) throws IOException
     {
-        String propsFilename = args.length > 0 ? args[0] : "C:\\Users\\VEST\\Desktop\\parser\\src\\main\\resources\\post2.properties";
+        String propsFilename = args.length > 0 ? args[0] : "D:\\Users7\\Admin\\Desktop\\parser2\\src\\main\\resources\\post2.properties";
         Properties props = new Properties();
         try (InputStream in = Files.newInputStream(Paths.get(propsFilename)))
         {
@@ -44,13 +44,13 @@ public class MypostTest2 {
 
         //URL u = new URL()
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-        connection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+        connection.setRequestProperty("Accept", "*/*");
         //connection.setRequestProperty("atg-rest-depth", "2");
         if (userAgent != null)
             connection.setRequestProperty("User-Agent", userAgent);
 
         if (redirects >= 0)
-            connection.setInstanceFollowRedirects(false);
+            connection.setInstanceFollowRedirects(true);
 
         connection.setDoOutput(true);
 
