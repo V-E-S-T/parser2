@@ -44,7 +44,7 @@ public class MypostTest2 {
 
         //URL u = new URL()
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-        connection.setRequestProperty("Accept", "application/json");
+        connection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
         //connection.setRequestProperty("atg-rest-depth", "2");
         if (userAgent != null)
             connection.setRequestProperty("User-Agent", userAgent);
